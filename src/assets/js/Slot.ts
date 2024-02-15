@@ -61,7 +61,26 @@ export default class Slot {
       onNameListChanged
     }: SlotConfigurations
   ) {
-    this.nameList = [];
+    this.nameList = [
+      "Alex Gonzalez",
+      "Brittany Hauser",
+      "Christine Sun",
+      "Denise Brown",
+      "Emily Haight",
+      "Frank S",
+      "Gina Fruik",
+      "Heather Via",
+      "Jane Yan",
+      "Jessica Jeng",
+      "Lisa Petros",
+      "Michelle Shugart",
+      "Rhett Daniels",
+      "Richard Warren",
+      "Richard Xu",
+      "Tim ODell",
+      "Toral Patel",
+      "Trey Nguyen",
+    ];
     this.havePreviousWinner = false;
     this.reelContainer = document.querySelector(reelContainerSelector);
     this.maxReelItems = maxReelItems;
@@ -190,7 +209,10 @@ export default class Slot {
     reelContainer.appendChild(fragment);
 
     console.info('Displayed items: ', randomNames);
-    console.info('Winner: ', randomNames[randomNames.length - 1]);
+
+    const winnerName = randomNames[randomNames.length - 1];
+
+    console.info('Winner: ', winnerName);
 
     // Remove winner form name list if necessary
     if (shouldRemoveWinner) {
@@ -219,6 +241,16 @@ export default class Slot {
       .forEach((element) => element.remove());
 
     this.havePreviousWinner = true;
+
+    const resultsList = document.getElementById('results');
+    const listItem = document.createElement('li');
+    listItem.textContent = winnerName;
+    resultsList!.appendChild(listItem);
+
+    const listItemCount = resultsList!.querySelectorAll('li').length;
+    const countSpan = document.getElementById('count');
+    console.info('Results count: ', listItemCount);
+    countSpan!.innerText = listItemCount.toString();
 
     if (this.onSpinEnd) {
       this.onSpinEnd();

@@ -40,27 +40,52 @@ body {
 }
 
 .theme--red {
-  background: linear-gradient(
-    240deg,
-    $color-red-step1 0.13%,
-    $color-red-step2 26.19%,
-    $color-red-step3 52.6%,
-    $color-red-step4 79.08%,
-    $color-red-step5 100%
-  );
+  // background: linear-gradient(240deg,
+  //     $color-red-step1 0.13%,
+  //     $color-red-step2 26.19%,
+  //     $color-red-step3 52.6%,
+  //     $color-red-step4 79.08%,
+  //     $color-red-step5 100%);
+  // color: $color-text-light;
+  background-image:
+    url('../images/bg.jpg'),
+    /* 图片路径 */
+    linear-gradient(240deg,
+      $color-red-step1 0.13%,
+      $color-red-step2 26.19%,
+      $color-red-step3 52.6%,
+      $color-red-step4 79.08%,
+      $color-red-step5 100%);
+  // background-blend-mode:hard-light;
+  background-blend-mode: luminosity;
+  /* 选择一种混合模式 */
   color: $color-text-light;
 }
 
 .theme--purple {
-  background: linear-gradient(
-    0deg,
-    $color-purple-step1 0.13%,
-    $color-purple-step2 23.02%,
-    $color-purple-step3 46.22%,
-    $color-purple-step4 69.56%,
-    $color-purple-step5 92.87%,
-    $color-purple-step6 100%
-  );
+  // background: linear-gradient(0deg,
+  //     $color-purple-step1 0.13%,
+  //     $color-purple-step2 23.02%,
+  //     $color-purple-step3 46.22%,
+  //     $color-purple-step4 69.56%,
+  //     $color-purple-step5 92.87%,
+  //     $color-purple-step6 100%);
+  // color: $color-text-light;
+  background-image:
+    url('../images/bg.jpg'),
+    /* 图片路径 */
+    linear-gradient(240deg,
+      $color-purple-step1 0.13%,
+      $color-purple-step2 23.02%,
+      $color-purple-step3 46.22%,
+      $color-purple-step4 69.56%,
+      $color-purple-step5 92.87%,
+      $color-purple-step6 100%);
+  // background-blend-mode:hard-light;
+  // background-blend-mode:luminosity;
+  // background-blend-mode:multiply;
+  // background-blend-mode: screen;
+  /* 选择一种混合模式 */
   color: $color-text-light;
 }
 
@@ -96,4 +121,40 @@ a {
 
 .align--right {
   text-align: right;
+}
+
+#resultsBG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  height: 100%;
+  width: 250px;
+  z-index: 9999;
+  opacity: .2;
+}
+
+#resultsList {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  z-index: 10000;
+}
+
+#resultsList h2 {
+  text-align: center;
+  text-shadow:
+    -1px -1px 0 #FFBF1F,
+    1px -1px 0 #FFBF1F,
+    -1px 1px 0 #FFBF1F,
+    1px 1px 0 #FFBF1F;
+  color: white;
+}
+
+#resultsList #results {
+  list-style: none;
+  color: white;
+  font-size: 20px;
 }
