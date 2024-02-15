@@ -50,12 +50,14 @@ body {
   background-image:
     url('../images/bg.jpg'),
     /* 图片路径 */
-    linear-gradient(240deg,
-      $color-red-step1 0.13%,
-      $color-red-step2 26.19%,
-      $color-red-step3 52.6%,
-      $color-red-step4 79.08%,
-      $color-red-step5 100%);
+      linear-gradient(
+        240deg,
+        $color-red-step1 0.13%,
+        $color-red-step2 26.19%,
+        $color-red-step3 52.6%,
+        $color-red-step4 79.08%,
+        $color-red-step5 100%
+      );
   // background-blend-mode:hard-light;
   background-blend-mode: luminosity;
   /* 选择一种混合模式 */
@@ -74,15 +76,17 @@ body {
   background-image:
     url('../images/bg.jpg'),
     /* 图片路径 */
-    linear-gradient(240deg,
-      $color-purple-step1 0.13%,
-      $color-purple-step2 23.02%,
-      $color-purple-step3 46.22%,
-      $color-purple-step4 69.56%,
-      $color-purple-step5 92.87%,
-      $color-purple-step6 100%);
-  // background-blend-mode:hard-light;
-  // background-blend-mode:luminosity;
+      linear-gradient(
+        240deg,
+        $color-purple-step1 0.13%,
+        $color-purple-step2 23.02%,
+        $color-purple-step3 46.22%,
+        $color-purple-step4 69.56%,
+        $color-purple-step5 92.87%,
+        $color-purple-step6 100%
+      );
+  // background-blend-mode: hard-light;
+  // background-blend-mode: luminosity;
   // background-blend-mode:multiply;
   // background-blend-mode: screen;
   /* 选择一种混合模式 */
@@ -131,7 +135,7 @@ a {
   height: 100%;
   width: 250px;
   z-index: 9999;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 #resultsList {
@@ -146,10 +150,10 @@ a {
 #resultsList h2 {
   text-align: center;
   text-shadow:
-    -1px -1px 0 #FFBF1F,
-    1px -1px 0 #FFBF1F,
-    -1px 1px 0 #FFBF1F,
-    1px 1px 0 #FFBF1F;
+    -1px -1px 0 #ffbf1f,
+    1px -1px 0 #ffbf1f,
+    -1px 1px 0 #ffbf1f,
+    1px 1px 0 #ffbf1f;
   color: white;
 }
 
